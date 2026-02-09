@@ -1,4 +1,5 @@
 export default function Skills() {
+  
   return (
     <section id="skills" className="py-32 px-8">
       <h2 className="text-3xl font-semibold mb-12">Skills</h2>

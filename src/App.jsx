@@ -8,11 +8,11 @@ function App() {
   return (
     <div className="bg-gray-900 text-white">
       <main className="max-w-6xl mx-auto">
-      <Intro />
-      <Contact />
-      <About />
-      <Projects />
-      <Skills />
+        <Intro />
+        <Contact />
+        <About />
+        <Projects />
+        <Skills />
       </main>
     </div>
   )
