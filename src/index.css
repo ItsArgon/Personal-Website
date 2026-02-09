@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/*Improve text rendering */
+body {
+  @apply bg-gray-900 text-white antialiased;
+}
+
+/*Optional: nicer selection color */
+::selection {
+  background-color: #6b04be; 
+  color: white;
+}
+
+@layer components {
+  .card-hover {
+    @apply transition duration-200 ease-out hover:-translate-y-1 hover:border-purple-500;
+  }
+}
+
