@@ -6,15 +6,22 @@ import Contact from './sections/Contact'
 
 function App() {
   return (
-    <div className="bg-gray-900 text-white">
-      <main className="max-w-6xl mx-auto">
+    <>
+      {/* Background layer */}
+      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-3xl animate-float" />
+        <div className="absolute top-1/3 -right-40 w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-3xl animate-float-slow" />
+      </div>
+
+      {/* Content layer */}
+      <main className="relative max-w-6xl mx-auto px-6">
         <Intro />
         <About />
         <Projects />
         <Skills />
         <Contact />
       </main>
-    </div>
+    </>
   )
 }
 

@@ -24,3 +24,53 @@ body {
   }
 }
 
+/* Animated Background */
+body {
+  background:
+    radial-gradient(1200px at 10% 10%, rgba(99, 102, 241, 0.15), transparent 40%),
+    radial-gradient(1000px at 90% 20%, rgba(168, 85, 247, 0.12), transparent 45%),
+    radial-gradient(800px at 50% 90%, rgba(56, 189, 248, 0.14), transparent 40%),
+    linear-gradient(to bottom, #09090b, #020617);
+  background-attachment: fixed;
+}
+
+/* Ambient animations */
+@keyframes ambientShift {
+  0% {
+    background-position: 0% 50%, 100% 50%, 50% 100%, 0% 0%;
+  }
+  50% {
+    background-position: 100% 50%, 0% 50%, 50% 0%, 0% 0%;
+  }
+  100% {
+    background-position: 0% 50%, 100% 50%, 50% 100%, 0% 0%;
+  }
+}
+
+body {
+  animation: ambientShift 30s ease-in-out infinite;
+}
+
+/* Floating animations */
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-60px) translateX(40px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+@keyframes floatSlow {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(40px) translateX(-40px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+.animate-float {
+  animation: float 18s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 25s ease-in-out infinite;
+}
+
+
+
