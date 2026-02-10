@@ -4,7 +4,7 @@ import {
   FaReact,
   FaAndroid, 
   FaDatabase,
-  FaGitAlt,
+  FaGithub,
   FaLinux,
   FaCode,
   FaProjectDiagram,
@@ -17,7 +17,7 @@ export default function Skills() {
     { name: "React", icon: FaReact },
     { name: "Flutter", icon: FaAndroid },
     { name: "Firebase", icon: FaDatabase },
-    { name: "Git", icon: FaGitAlt },
+    { name: "Git", icon: FaGithub },
     { name: "Linux", icon: FaLinux },
     { name: "Data Structures", icon: FaProjectDiagram },
   ]
