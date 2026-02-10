@@ -9,10 +9,10 @@ function App() {
     <div className="bg-gray-900 text-white">
       <main className="max-w-6xl mx-auto">
         <Intro />
-        <Contact />
         <About />
         <Projects />
         <Skills />
+        <Contact />
       </main>
     </div>
   )
