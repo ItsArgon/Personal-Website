@@ -1,3 +1,4 @@
+import Navbar from './components/Navbar'
 import Intro from './sections/Intro'
 import About from './sections/About'
 import Projects from './sections/Projects'
@@ -7,6 +8,8 @@ import Contact from './sections/Contact'
 function App() {
   return (
     <>
+      <Navbar />
+
       {/* Background layer */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-3xl animate-float" />

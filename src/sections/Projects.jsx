@@ -35,11 +35,11 @@ export default function Projects() {
   ]
 
   return (
-    <section id="projects" className="py-24 px-6">
+    <section id="projects" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-semibold mb-12">Projects</h2>
         <Reveal>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <a
               key={project.title}
@@ -50,37 +50,55 @@ export default function Projects() {
                 group
                 project-card
                 relative
+                overflow-hidden
                 p-6
                 border border-gray-800
                 rounded-xl
-                bg-zinc-900/50
+                bg-gradient-to-br from-gray-900/80 via-gray-900/50 to-gray-900/20
+                backdrop-blur-sm
+                shadow-lg
+                hover:shadow-2xl
                 transition-all
+                duration-300
                 card-hover
               "
             >
-              {/* GitHub icon */}
-              <FaGithub
-                className="
-                  absolute
-                  top-4
-                  right-4
-                  text-gray-400
-                  opacity-70
-                  transition
-                  group-hover:text-white
-                  group-hover:opacity-100
-                "
-                size={18}
-              />
+              {/* Gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-              <h3 className="text-xl font-semibold">{project.title}
-              </h3>
-              <p className="mt-3 text-gray-300 text-sm leading-relaxed">
-                {project.description}
-              </p>
-              <p className="mt-4 text-xs text-gray-400">
-                {project.tech}
-              </p>
+              {/* GitHub icon */}
+              <div className="absolute top-4 right-4 z-10">
+                <FaGithub
+                  className="
+                    text-gray-400
+                    opacity-70
+                    transition
+                    group-hover:text-purple-400
+                    group-hover:opacity-100
+                    group-hover:scale-110
+                  "
+                  size={20}
+                />
+              </div>
+
+              {/* Content */}
+              <div className="relative z-10">
+                <h3 className="text-xl font-semibold text-white group-hover:text-purple-300 transition">
+                  {project.title}
+                </h3>
+                <p className="mt-4 text-gray-300 text-sm leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="mt-6 pt-4 border-t border-gray-700">
+                  <p className="text-xs text-gray-400 font-medium">
+                    {project.tech}
+                  </p>
+                </div>
+                <div className="mt-4 flex items-center text-purple-400 text-sm font-medium group-hover:gap-2 transition-all">
+                  View on GitHub
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </div>
             </a>
           ))}
         </div>
