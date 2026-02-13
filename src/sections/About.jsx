@@ -10,11 +10,12 @@ export default function About() {
           <div className="space-y-4">
             {/* Intro Section */}
             <div className="p-6 rounded-lg border border-gray-800 bg-gray-900/30 hover:border-purple-500/50 transition-colors">
-            <h3 className="text-lg font-semibold text-purple-400 mb-3">About Me</h3>
+            <h3 className="text-lg font-semibold text-purple-400 mb-3">Who I Am</h3>
               <p className="text-gray-300 leading-relaxed">
                 I'm a third-year Computer Science student at the University of Minnesota Duluth passionate about
                 building scalable systems and intuitive user interfaces. I specialize in full-stack development
-                with a focus on backend architecture and data-driven applications.
+                with a focus on backend architecture and data-driven applications. I am also interested in Computer 
+                Security and general Software Engineering best practices.
               </p>
             </div>
 
