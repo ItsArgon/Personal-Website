@@ -2,12 +2,14 @@ import Reveal from "../components/Reveal"
 import {
   FaJava,
   FaReact,
-  FaAndroid, 
+  FaMobileAlt,
   FaDatabase,
   FaGithub,
   FaLinux,
   FaCode,
   FaProjectDiagram,
+  FaChartBar,
+  FaSync,
 } from "react-icons/fa"
 
 export default function Skills() {
@@ -18,7 +20,7 @@ export default function Skills() {
         { name: "Java", icon: FaJava },
         { name: "C++", icon: FaCode },
         { name: "React", icon: FaReact },
-        { name: "Flutter", icon: FaAndroid },
+        { name: "Flutter", icon: FaMobileAlt },
       ],
     },
     {
@@ -32,8 +34,9 @@ export default function Skills() {
     {
       name: "Core Concepts",
       skills: [
-        { name: "Data Structures", icon: FaProjectDiagram },
+        { name: "Agile", icon: FaSync},
         { name: "Algorithms", icon: FaCode },
+        { name: "Data Structures", icon: FaChartBar},
         { name: "System Design", icon: FaProjectDiagram },
       ],
     },
